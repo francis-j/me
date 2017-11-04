@@ -1,0 +1,17 @@
+@import "~style-vars.scss";
+
+.header {
+    position: relative;
+    height: 70px;
+    line-height: 70px;
+    width: 100%;
+    margin: 0;
+    background: $secondary-bg-color;
+    text-align: center;
+}
+
+.header h2 {
+    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 0;
+}
