@@ -1,13 +1,7 @@
 @import "~style-vars.scss";
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    height: 50px;
-    width: 100%;
     background: $tertiary-bg-color;
-    line-height: 50px;
-    text-align: center;
 }
 
 .footer a, a:active, a:focus {
