@@ -1,4 +1,5 @@
 @import "~style-vars.scss";
+@import "~bootstrap/dist/css/bootstrap.min.css";
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600');
 
 html, body {
@@ -44,6 +45,23 @@ p, li {
     font-size: 10pt;
     font-weight: 300;
     padding: 5px 0;
+}
+
+.btn-group {
+    margin: 10px;
+}
+
+.btn-generic {
+    background: $tertiary-bg-color;
+}
+
+.btn.active {
+    background-color: $secondary-bg-color;
+    color: $secondary-font-color;
+}
+
+.btn-generic:hover, .btn-generic:active, .btn-generic:focus {
+    color: $secondary-font-color;
 }
 
 .app {
