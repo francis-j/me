@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Section } from '../../models/Section';
 
 @Component({
     selector: 'section',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SectionComponent implements OnInit {
 
-    @Input() section:String;
+    @Input() section:Section;
 
     constructor() { }
 
