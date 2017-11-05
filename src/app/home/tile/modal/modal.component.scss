@@ -1,0 +1,15 @@
+@import "~style-vars.scss";
+
+.modal-header {
+    background: $tertiary-bg-color;
+    border: none;
+}
+
+.modal-body {
+    max-height: 500px;
+}
+
+.modal-body, .modal-footer {
+    background: $secondary-bg-color;
+    border: 1px $tertiary-bg-color solid;
+}

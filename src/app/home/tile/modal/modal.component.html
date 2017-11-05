@@ -1,3 +1,27 @@
-<p>
-    modal works!
-</p>
+<div class="modal-header">
+    <h6 class="modal-title">{{section.title}}</h6>
+</div>
+<div class="modal-body">
+    <div class="pre-scrollable">
+        <p *ngFor="let paragraph of section.paragraphs">
+            {{paragraph}}
+        </p>
+        <div *ngFor="let subsection of section.subsections">
+            <div *ngIf="section.subsections.length > 0">
+                <h3>{{subsection.title}}</h3>
+                <h4>{{subsection.subtitle}}</h4>
+                <p *ngFor="let paragraph of subsection.paragraphs">
+                    {{paragraph}}
+                </p>
+                <ul *ngIf="subsection.list?.length > 0">
+                    <li *ngFor="let listItem of subsection.list">
+                        {{listItem}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-generic" (click)="close()">OK</button>
+</div>

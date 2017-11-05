@@ -28,6 +28,7 @@ import { ModalComponent } from './home/tile/modal/modal.component';
         NgbModule.forRoot()
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    entryComponents: [ModalComponent]
 })
 export class AppModule { }

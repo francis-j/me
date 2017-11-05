@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Section } from '../../models/Section';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from './modal/modal.component';
 
 @Component({
     selector: 'tile',
@@ -14,6 +15,12 @@ export class TileComponent implements OnInit {
     constructor(private modalService: NgbModal) { }
 
     ngOnInit() {
+    }
+
+    private openModal() {
+        let options:NgbModalOptions = { windowClass: "in" };
+        const modal = this.modalService.open(ModalComponent, options);
+        modal.componentInstance.section = this.section;
     }
 
 }
