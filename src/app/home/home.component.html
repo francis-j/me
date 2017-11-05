@@ -1,3 +1,16 @@
 <div class="home">
-    <section *ngFor="let section of sections" [section]="section"></section>
+    <div class="viewFormat btn-group">
+        <button type="button" class="btn btn-generic active" [ngClass]="{active: activeView == 0}" (click)="changeView(0)">List</button>
+        <button type="button" class="btn btn-generic" [ngClass]="{active: activeView == 1}" (click)="changeView(1)">Tiles</button>
+    </div>
+    <div *ngIf="activeView == 0">
+        <div>
+            <section *ngFor="let section of sections" [section]="section"></section>
+        </div>
+    </div>
+    <div *ngIf="activeView == 1">
+        <div>
+            Second page
+        </div>
+    </div>
 </div>
