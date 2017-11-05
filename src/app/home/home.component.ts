@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
         this.initEducationHistory();
         this.initHobbies();
 
-        this.activeView = 1;
+        this.activeView = 0;
     }
 
     changeView(id: any) {
