@@ -1,0 +1,19 @@
+@import "~style-vars.scss";
+
+.tile {
+    background: $secondary-bg-color;
+    border-radius: 5px;
+    height: 150px;
+    margin: 10px 0;
+}
+
+.tile h3 {
+    text-align: center;
+    line-height: 150px;
+    vertical-align: middle;
+}
+
+.tile a {
+    color: $primary-font-color;
+    text-decoration: none;
+}

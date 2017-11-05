@@ -9,8 +9,10 @@
         </div>
     </div>
     <div *ngIf="activeView == 1">
-        <div>
-            Second page
+        <div class="row">
+            <div class="tiles">
+                <tile *ngFor="let section of sections" [section]="section"></tile>
+            </div>
         </div>
     </div>
 </div>
