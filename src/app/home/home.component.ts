@@ -9,7 +9,7 @@ import { SubSection } from '../models/SubSection';
 })
 export class HomeComponent implements OnInit {
 
-    public activeView: String;
+    public activeView: any;
     public sections: Array<Section> = [];
 
     constructor() { }
@@ -21,14 +21,11 @@ export class HomeComponent implements OnInit {
         this.initEducationHistory();
         this.initHobbies();
 
-        this.activeView = "0";
+        this.activeView = 1;
     }
 
-    changeView(id: String) {
+    changeView(id: any) {
         this.activeView = id;
-
-        //change view
-
     }
 
     private initPersonalProfile() {
