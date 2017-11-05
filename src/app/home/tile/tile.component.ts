@@ -17,7 +17,7 @@ export class TileComponent implements OnInit {
     ngOnInit() {
     }
 
-    private openModal() {
+    openModal() {
         let options:NgbModalOptions = { windowClass: "in" };
         const modal = this.modalService.open(ModalComponent, options);
         modal.componentInstance.section = this.section;
