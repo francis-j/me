@@ -15,11 +15,13 @@ export class HomeComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
-        this.initPersonalProfile();
-        this.initTechnicalSkills();
-        this.initEmploymentHistory();
-        this.initEducationHistory();
-        this.initHobbies();
+        let personalProfile = this.getPersonalProfile();
+        let technicalSkills = this.getTechnicalSkills();
+        let employmentHistory = this.getEmploymentHistory();
+        let educationHistory = this.getEducationHistory();
+        let hobbies = this.getHobbies();
+
+        this.sections = [personalProfile, technicalSkills, employmentHistory, educationHistory, hobbies];
 
         this.activeView = 0;
     }
@@ -28,7 +30,7 @@ export class HomeComponent implements OnInit {
         this.activeView = id;
     }
 
-    private initPersonalProfile() {
+    private getPersonalProfile():Section {
         let title = "Personal Profile";
         let paragraphs = [
             "Initially working at ORC International as a Technical Consultant, much of my time was spent writing complex SQL for the backend of our online surveys and reporting outputs, and building excellent relationships with both clients and internal stakeholders. This combined with my technical ability was quickly recognised and within two years, I was promoted to the senior level position.",
@@ -36,10 +38,10 @@ export class HomeComponent implements OnInit {
             "In my free time, I have chosen to learn Angular 4 and created a website that consumes a RESTful .NET Core Web API, which stores and reads data from a MongoDB database, as well as a Swift iOS application to test my Web API."
         ];
 
-        this.sections.push(new Section(title, paragraphs, null));
+        return new Section(title, paragraphs, null);
     }
 
-    private initTechnicalSkills() {
+    private getTechnicalSkills():Section {
         let title = "Technical Skills";
         let list = [
             "Technologies: .NET Framework 4.5, .NET Core 1.0 – 2, ASP.NET MVC 3 & 5, ASP.NET Web API 2, SQL Server 2008 R2 - 2012, Angular 4, Bootstrap, MongoDB",
@@ -49,10 +51,10 @@ export class HomeComponent implements OnInit {
         ];
         let subsection = new SubSection("", "", null, list);
 
-        this.sections.push(new Section(title, null, [subsection]));
+        return new Section(title, null, [subsection]);
     }
 
-    private initEmploymentHistory() {
+    private getEmploymentHistory():Section {
         let title = "Employment History";
 
         let responsibilitiesJob1 = [
@@ -90,15 +92,15 @@ export class HomeComponent implements OnInit {
             new SubSection(
                 "ORC International",
                 "Senior Technical Consultant: February 2015 – April 2015, Technical Consultant: May 2013 – February 2015",
-                ["Key member of the development team responsible for looking after internal and external web applications, primarily using ASP.NET MVC."],
+                ["Managing and delivering the technical elements of large employee engagement surveys, for key clients such as Booking.com, Transport for London and British Airways."],
                 responsibilitiesJob2
             )
         ];
 
-        this.sections.push(new Section(title, null, companies));
+        return new Section(title, null, companies);
     }
 
-    private initEducationHistory() {
+    private getEducationHistory():Section {
         let title = "Education & Courses";
 
         let education = [
@@ -130,10 +132,10 @@ export class HomeComponent implements OnInit {
             )
         ];
 
-        this.sections.push(new Section(title, null, education));
+        return new Section(title, null, education);
     }
 
-    private initHobbies() {
+    private getHobbies():Section {
         let title = "Hobbies & Interests";
         let list = [
             "Formula 1: Dedicated fan of the sport and the McLaren team",
@@ -144,6 +146,6 @@ export class HomeComponent implements OnInit {
         ];
         let subsection = new SubSection("", "", null, list);
 
-        this.sections.push(new Section(title, null, [subsection]));
+        return new Section(title, null, [subsection]);
     }
 }
