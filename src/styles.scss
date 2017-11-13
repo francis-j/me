@@ -73,9 +73,10 @@ p, li {
     height: 100%;
 }
 
-.header, .footer {
+.header, .header-content, .footer {
     padding: 10px 0;
     text-align: center;
+    z-index: 10;
 }
 
 .modal, .modal-dialog, .modal-content {

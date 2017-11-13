@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var fadeHeader: any;
+
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
@@ -10,6 +12,7 @@ export class HeaderComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
+        new fadeHeader();
     }
 
 }
