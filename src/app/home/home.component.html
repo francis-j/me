@@ -1,14 +1,35 @@
 <div class="home">
-    <div class="viewFormat btn-group">
+    <div class="btn-group center-group">
         <button type="button" class="btn btn-generic active" [ngClass]="{active: activeView == 0}" (click)="changeView(0)">List</button>
-        <button type="button" class="btn btn-generic" [ngClass]="{active: activeView == 1}" (click)="changeView(1)">Tiles</button>
+        <button type="button" class="btn btn-generic" [ngClass]="{active: activeView == 1}" (click)="changeView(1)">Single</button>
+        <button type="button" class="btn btn-generic" [ngClass]="{active: activeView == 2}" (click)="changeView(2)">Tiles</button>
     </div>
     <div *ngIf="activeView == 0">
         <div>
-            <section *ngFor="let section of sections" [section]="section"></section>
+            <section *ngFor="let section of sections" [section]="section" id="section{{section.id}}"></section>
+            <div class="btn-group right-group">
+                <button class="btn btn-generic" (click)="smoothScrollTo(0)">Top</button>
+            </div>
         </div>
     </div>
     <div *ngIf="activeView == 1">
+        <div>
+            <div class="col-lg-6 left margin-10">
+                <h5>{{sections.indexOf(singleSection) + 1}} / {{sections.length}}</h5>
+            </div>
+            <div class="col-lg-6 right margin-10">
+                <button class="btn btn-generic" (click)="singlePrevious()">Previous</button>
+                <button class="btn btn-generic" (click)="singleNext()">Next</button>
+            </div>
+            <div>
+                <section [section]="singleSection"></section>
+            </div>
+            <div class="btn-group right-group">
+                <button class="btn btn-generic" (click)="smoothScrollTo(0)">Top</button>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="activeView == 2">
         <div class="row">
             <div class="tiles">
                 <tile *ngFor="let section of sections" [section]="section"></tile>

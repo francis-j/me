@@ -52,7 +52,11 @@ p, li {
 }
 
 .btn-group {
-    margin: 10px;
+    margin: 10px 0;
+}
+
+.btn-group > .btn {
+    float: none;
 }
 
 .btn-generic {
@@ -82,4 +86,24 @@ p, li {
 .modal, .modal-dialog, .modal-content {
     top: 10px;
     bottom: 10px;
+}
+
+.center-group {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.left {
+    float: left;
+    text-align: left;
+}
+
+.right {
+    float: right;
+    text-align: right;
+}
+
+.margin-10 {
+    margin: 10px 0;
 }

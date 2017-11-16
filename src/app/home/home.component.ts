@@ -4,6 +4,8 @@ import { SubSection } from '../models/SubSection';
 import { AppService } from '../app.service';
 import 'rxjs/add/observable/throw';
 
+declare var smoothScrollTo: any;
+
 @Component({
     selector: 'home',
     templateUrl: './home.component.html',
@@ -13,6 +15,7 @@ export class HomeComponent implements OnInit {
 
     public activeView: any;
     public sections: Array<Section> = [];
+    public singleSection: Section;
 
     constructor(private service: AppService) { }
 
@@ -34,6 +37,9 @@ export class HomeComponent implements OnInit {
         if (response.status == 200) {
             var object: any = Object.assign([], response.json());
             this.sections = object.data[0].sections;
+
+            if (this.sections.length > 0)
+                this.singleSection = this.sections[0];
         }
         else {
             this.displayError(response.statusText);
@@ -47,5 +53,23 @@ export class HomeComponent implements OnInit {
 
     changeView(id: any) {
         this.activeView = id;
+    }
+
+    singleNext() {
+        let index = this.sections.indexOf(this.singleSection);
+        if (index < this.sections.length - 1) {
+            this.singleSection = this.sections[index + 1];
+        }
+    }
+
+    singlePrevious() {
+        let index = this.sections.indexOf(this.singleSection);
+        if (index > 0) {
+            this.singleSection = this.sections[index - 1];
+        }
+    }
+
+    smoothScrollTo(yPos) {
+        new smoothScrollTo(yPos);
     }
 }
