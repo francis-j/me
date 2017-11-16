@@ -3,11 +3,12 @@ const router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
 
-console.log(process.env.DB_URL);
+const db_auth = process.env.DB_USR + ":" + process.env.DB_PWD;
+const db_uri = "mongodb://" + (db_auth === ":" ? process.env.DB_URI : db_auth + "@" + process.env.DB_URI);
 
 // Connect
 const connection = (closure) => {
-    return MongoClient.connect(process.env.DB_URL, (err, db) => {
+    return MongoClient.connect(db_uri, (err, db) => {
         if (err) return console.log(err);
 
         closure(db);
@@ -37,7 +38,7 @@ router.all('*', function (req, res, next) {
 });
 
 router.get("/mongodb/cstring", (req, res) => {
-    res.json(process.env.DB_URL);
+    res.json(db_uri);
 });
 
 // Get sections
