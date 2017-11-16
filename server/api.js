@@ -3,6 +3,8 @@ const router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
 
+console.log(process.env.DB_URL);
+
 // Connect
 const connection = (closure) => {
     return MongoClient.connect(process.env.DB_URL, (err, db) => {
@@ -34,9 +36,12 @@ router.all('*', function (req, res, next) {
     next();
 });
 
+router.get("/mongodb/cstring", (req, res) => {
+    res.json(process.env.DB_URL);
+});
+
 // Get sections
 router.get('/section', (req, res) => {
-    res.header("Access-Control-Allow-Origin", "*");
     connection((db) => {
         db.collection('me')
             .find()
