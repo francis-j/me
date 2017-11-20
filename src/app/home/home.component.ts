@@ -30,21 +30,21 @@ export class HomeComponent implements OnInit {
             .getContents()
             .subscribe(
             response => this.processResponse(response),
-            error => this.displayError(error)
-            );
+            error => {
+                this.service
+                    .getContentsLocal()
+                    .subscribe(
+                    response => this.processResponse(response),
+                    error => this.displayError(error)
+                    );
+            });
     }
 
-    private processResponse(response: Response) {
-        if (response.status == 200) {
-            var object: any = Object.assign([], response.json());
-            this.sections = object.data[0].sections;
+    private processResponse(sections: Array<Section>) {
+        this.sections = sections;
 
-            if (this.sections.length > 0) {
-                this.singleSection = this.sections[0];
-            }
-        }
-        else {
-            this.displayError(response.statusText);
+        if (this.sections.length > 0) {
+            this.singleSection = this.sections[0];
         }
     }
 

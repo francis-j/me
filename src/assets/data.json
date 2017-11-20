@@ -1,0 +1,144 @@
+{
+    "sections" : [ 
+        {
+            "id" : 1,
+            "title" : "Personal Profile",
+            "paragraphs" : [ 
+                "Initially working at ORC International as a Technical Consultant, much of my time was spent writing complex SQL for the backend of our online surveys and reporting outputs, and building excellent relationships with both clients and internal stakeholders. This combined with my technical ability was quickly recognised and within two years, I was promoted to the senior level position.", 
+                "Shortly after being promoted, I successfully applied internally for the role of Web Application Developer. Particular focus was given to my development within the ASP.NET MVC framework and exploring new technologies such as .NET Core and created a native prototype Android app for the business.", 
+                "In my free time, I have chosen to learn Angular 4 and created a website that consumes a RESTful .NET Core Web API, which stores and reads data from a MongoDB database, as well as a Swift iOS application to test my Web API."
+            ],
+            "subsections" : []
+        }, 
+        {
+            "id" : 2,
+            "title" : "Technical Skills",
+            "paragraphs" : [],
+            "subsections" : [ 
+                {
+                    "id" : 1,
+                    "title" : "",
+                    "subtitle" : "",
+                    "paragraphs" : [],
+                    "list" : [ 
+                        "Technologies: .NET Framework 4.5, .NET Core 1.0 – 2, ASP.NET MVC 3 & 5, ASP.NET Web API 2, SQL Server 2008 R2 - 2012, Angular 2+, Bootstrap, MongoDB", 
+                        "Languages: C#, JavaScript, HTML, CSS, T-SQL, Swift, Android Java", 
+                        "Practices: Dependency Injection", 
+                        "Tools: Visual Studio 2013 – 2017, TFS, VSO, SVN, Git, Xcode, Android Studio, Eclipse"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id" : 3,
+            "title" : "Employment History",
+            "paragraphs" : [],
+            "subsections" : [ 
+                {
+                    "id" : 1,
+                    "title" : "ORC International",
+                    "subtitle" : "Web Application Developer: April 2015 – July 2017",
+                    "paragraphs" : [ 
+                        "Developed and supported new and existing ASP.NET MVC applications with SQL Server backends."
+                    ],
+                    "list" : [ 
+                        "Developed, supported and deployed 6 major releases of the company’s internal online survey management suite, built using a mixture of MVC 3 and Web Forms and supported by SQL Server", 
+                        "Deployed application and database updates, including schema migration and the configuration of IIS", 
+                        "Created bespoke MVC 5 web applications based on wireframes created by the UX team and to the internal project manager’s requirements and specifications", 
+                        "Introduced an entirely new product to our line of reporting tools by customising SyncFusion Essential JS components within an MVC solution", 
+                        "Designed and developed a native Android application to monitor daily response rates and employee engagement scores, across organisational hierarchies", 
+                        "Researched new technologies such as .NET Core and produced proof of concept online surveys to replace the existing Classic ASP surveys", 
+                        "Developed a RESTful Web API for the internal online survey management suite available to be consumed by new web applications", 
+                        "Gathered system requirements and provided costs for features and bug fixes of various new and existing web applications. Documented system designs based on requirements", 
+                        "Reviewed and system tested other developers’ code", 
+                        "Used TFS & SVN for source control and managed projects on VSO"
+                    ]
+                }, 
+                {
+                    "id" : 2,
+                    "title" : "ORC International",
+                    "subtitle" : "Senior Technical Consultant: February 2015 – April 2015, Technical Consultant: May 2013 – February 2015",
+                    "paragraphs" : [ 
+                        "Managed employee engagement survey projects from a technical perspective, for key clients such as Booking.com, Transport for London and British Airways. Large amount of T-SQL development to improve existing complex stored procedures used to manage data, as well as development for new business ideas. Promotion to Senior Technical consultant led to more focus being placed on large-scale projects and T-SQL development."
+                    ],
+                    "list" : [ 
+                        "Day to day technical project management of employee engagement projects generating revenue between £20-200k", 
+                        "Produced multi-language surveys using HTML, CSS, Classic ASP, JavaScript and JQuery", 
+                        "Developed re-usable, generic SQL scripts to support several add-on features of online surveys such as matrix hierarchies and personal employee engagement, still used by the global team", 
+                        "Improved the performance and efficiency of existing SQL stored procedures used by all project databases", 
+                        "Built organisational hierarchies based on client HR system Excel exports", 
+                        "Online survey data collection, cleaning and aggregation", 
+                        "Created and published complex, graphical SSRS reports based on wireframes by designers and delivered them to clients via SFTP or the company’s client-facing project management suite", 
+                        "Met deadlines and delivered all projects at a high level of quality", 
+                        "Mentored and guided junior members of the team"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id" : 4,
+            "title" : "Education & Courses",
+            "paragraphs" : [],
+            "subsections" : [ 
+                {
+                    "id" : 1,
+                    "title" : "QA: March 2016",
+                    "subtitle" : "",
+                    "paragraphs" : [ 
+                        "Building Effective ASP.NET MVC 5 Web Applications using Visual Studio 2013 (QAMVC5)"
+                    ],
+                    "list" : []
+                }, 
+                {
+                    "id" : 2,
+                    "title" : "QA: July 2013",
+                    "subtitle" : "",
+                    "paragraphs" : [ 
+                        "Writing Queries using Microsoft SQL Server 2008 Transact-SQL (M2778)"
+                    ],
+                    "list" : []
+                }, 
+                {
+                    "id" : 3,
+                    "title" : "QA: March 2016",
+                    "subtitle" : "",
+                    "paragraphs" : [ 
+                        "Computer Science BSc (Hons): Upper second-class honours (2:1)", 
+                        "Dissertation: A Game-Playing Environment (C#): 75%"
+                    ],
+                    "list" : []
+                }, 
+                {
+                    "id" : 4,
+                    "title" : "QA: March 2016",
+                    "subtitle" : "",
+                    "paragraphs" : [ 
+                        "A Levels: Psychology (B), Maths (C), Computer Science (C)", 
+                        "GCSEs: 10 A-Cs including Maths (A) and English (B)"
+                    ],
+                    "list" : []
+                }
+            ]
+        }, 
+        {
+            "id" : 5,
+            "title" : "Hobbies & Interests",
+            "paragraphs" : [],
+            "subsections" : [ 
+                {
+                    "id" : 1,
+                    "title" : "",
+                    "subtitle" : "",
+                    "paragraphs" : [],
+                    "list" : [ 
+                        "Formula 1: A massive fan of the pinnacle of motorsport and the McLaren team (upsettingly), I keep up-to-date with the latest F1 news and watch every race", 
+                        "Cars and mechanics: A bit of a Toyota fanboy, I own a Toyota GT86 and 1995 Toyota Celica GT-Four ST205. I enjoy spirited drives in the countryside, regularly going to mid-Wales and I recently went to Scotland to drive the North Coast 500. I've also spent a lot of time repairing, carrying out maintenance and servicing for the Celica - it is 22 years old after all!", 
+                        "Gaming: I have a mid-range gaming PC and an Xbox One. I've jumped on the PUBG hype train and always try to complete the latest Forzathon with my G920 steering wheel", 
+                        "TV: Always watching a variety of the latest TV shows such as Stranger Things, Game of Thrones, Designated Survivor and many more", 
+                        "Travelling: As many do, I love to travel. In just the last two years, I've been to the US (Miami & NY), Jamaica, Vietnam and the Philippines"
+                    ]
+                }
+            ]
+        }
+    ]
+}

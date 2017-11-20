@@ -22,14 +22,28 @@ export class AppService {
     getContents(): Observable<any> {
         return this.http
             .get(environment.api_url + "/section", this.options)
-            .map(this.getBody)
+            .map(this.mapBody)
             .catch(this.logError);
     }
 
-    private getBody(res: Response) {
+    getContentsLocal(): Observable<any> {
+        return this.http
+            .get("assets/data.json")
+            .map(this.mapBodyLocal)
+            .catch(this.logError);
+    }
+
+    private mapBody
+    (res: Response) {
         let response = JSON.parse(JSON.stringify(res));
-        let body = JSON.parse(response._body).data[0].sections;
-        return res || {};
+        let body = JSON.parse(response._body).data[0];
+        return body.sections || {};
+    }
+
+    private mapBodyLocal(res: Response) {
+        let response = JSON.parse(JSON.stringify(res));
+        let body = JSON.parse(response._body);
+        return body.sections || {};
     }
 
     private logError(error: any) {
