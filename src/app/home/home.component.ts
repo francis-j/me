@@ -5,6 +5,7 @@ import { AppService } from '../app.service';
 import 'rxjs/add/observable/throw';
 
 declare var smoothScrollTo: any;
+declare var scrollToSection: any;
 
 @Component({
     selector: 'home',
@@ -38,8 +39,9 @@ export class HomeComponent implements OnInit {
             var object: any = Object.assign([], response.json());
             this.sections = object.data[0].sections;
 
-            if (this.sections.length > 0)
+            if (this.sections.length > 0) {
                 this.singleSection = this.sections[0];
+            }
         }
         else {
             this.displayError(response.statusText);
@@ -53,6 +55,25 @@ export class HomeComponent implements OnInit {
 
     changeView(id: any) {
         this.activeView = id;
+    }
+
+    listNext(id) {
+        let index = this.indexOfSection(id);
+        if (index < this.sections.length - 1) {
+            new scrollToSection(this.sections[index + 1].id);
+        }
+    }
+
+    listPrevious(id) {
+        let index = this.indexOfSection(id);
+        if (index > 0) {
+            new scrollToSection(this.sections[index - 1].id);
+        }
+    }
+
+    indexOfSection(id) {
+        let section = this.sections.find(x => x.id == id)
+        return this.sections.indexOf(section);
     }
 
     singleNext() {

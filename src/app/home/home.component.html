@@ -5,8 +5,12 @@
         <button type="button" class="btn btn-generic" [ngClass]="{active: activeView == 2}" (click)="changeView(2)">Tiles</button>
     </div>
     <div *ngIf="activeView == 0">
-        <div>
-            <section *ngFor="let section of sections" [section]="section" id="section{{section.id}}"></section>
+        <div *ngFor="let section of sections">
+            <section [section]="section" id="section{{section.id}}"></section>
+            <div style="padding: 0 0 10px 20px;">
+                <button *ngIf="indexOfSection(section.id) > 0" class="btn btn-generic" (click)="listPrevious(section.id)"><</button>
+                <button *ngIf="indexOfSection(section.id) < sections.length - 1" class="btn btn-generic" (click)="listNext(section.id)">></button>
+            </div>
         </div>
     </div>
     <div *ngIf="activeView == 1">
@@ -28,7 +32,7 @@
             </div>
         </div>
     </div>
-    <div class="btn-group right-group margin-10">
+    <div class="btn-group right-group" style="padding: 0 0 10px 20px;">
         <button class="btn btn-generic" (click)="smoothScrollTo(0)">Top</button>
     </div>
 </div>

@@ -17,7 +17,7 @@ function smoothScrollTo(yPos) {
 
 function scrollToSection(id) {
     var element = document.getElementById("section" + id);
-    var y = element.offsetTop;
+    var y = element.offsetTop - 80; //80px added to take header into account
 
     smoothScrollTo(y);
 }
